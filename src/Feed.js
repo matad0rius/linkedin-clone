@@ -5,8 +5,11 @@ import ImageIcon from "@material-ui/icons/Image";
 import SubscriptionsIcon from "@material-ui/icons/Subscriptions";
 import EventNoteIcon from "@material-ui/icons/EventNote";
 import CalenderViewDayIcon from "@material-ui/icons/CalendarViewDay";
+import Post from './Post';
 
 function Feed() {
+
+  
   return (
     <div className="feed">
       <div className="feed__inputContainer">
@@ -30,6 +33,11 @@ function Feed() {
         </div>
       </div>
       {/* Posts */}
+      <Post
+        name="aKa Godas"
+        description="This is a ttest"
+        message="is it working i hope so "
+      />
     </div>
   );
 }
