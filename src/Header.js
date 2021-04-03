@@ -6,8 +6,19 @@ import SupervisorAccountIcon from "@material-ui/icons/SupervisorAccount";
 import BussinesCenterIcon from "@material-ui/icons/BusinessCenter";
 import ChatIcon from "@material-ui/icons/Chat";
 import NotificationsIcon from "@material-ui/icons/Notifications";
+import { useDispatch } from "react-redux";
+import { auth } from './firebase';
+import { logout } from './features/userSlice';
 
 function Header() {
+
+  const dispatch = useDispatch();
+
+  const logoutOfApp = () => {
+    dispatch(logout())
+    auth.signOut()
+  }
+
   return (
     <div className="header">
       <div className="header__left">
@@ -18,7 +29,7 @@ function Header() {
 
         <div className="header__search">
           <SearchIcon />
-          <input type="text" />
+          <input placeHolder="Search" type="text" />
         </div>
       </div>
 
@@ -29,8 +40,9 @@ function Header() {
         <HeaderOption Icon={ChatIcon} title="Messaging" />
         <HeaderOption Icon={NotificationsIcon} title="Notidications" />
         <HeaderOption
-          avatar="https://image.freepik.com/vector-gratis/avatar-doctora-mascarilla-ilustracion-estilo-dibujos-animados_198838-53.jpg"
+          avatar={true}
           title="me"
+          onClick={logoutOfApp}
         />
       </div>
     </div>
