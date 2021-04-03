@@ -1,6 +1,5 @@
 import "./Post.css";
 import Avatar from "@material-ui/core/Avatar";
-import { ThumbUpAltOutlined } from "@material-ui/icons";
 import InputOption from "./InputOption";
 import ThumbUpAltOutlinedIcon from "@material-ui/icons/ThumbUpAltOutlined";
 import ChatOutlinedIcon from "@material-ui/icons/ChatOutlined";
